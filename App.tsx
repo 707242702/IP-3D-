@@ -277,7 +277,18 @@ const App: React.FC = () => {
                   Reset
                 </button>
               )}
-            </div>
+            </div>{/* 新增的修改 API Key 按钮 */}
+<div className="px-6 mb-4">
+  <button 
+    onClick={handleSelectKey}
+    className="w-full flex items-center justify-between text-blue-600 hover:bg-blue-50 transition-colors bg-white p-4 rounded-xl shadow-sm border border-blue-100"
+  >
+    <div className="flex items-center gap-2">
+      <Key className="w-5 h-5" />
+      <span className="font-bold text-sm">更换 API Key</span>
+    </div>
+  </button>
+</div>
             <div className={`relative group border-2 border-dashed rounded-2xl p-4 transition-all duration-200 flex flex-col items-center justify-center bg-gray-50 cursor-pointer overflow-hidden
               ${referenceImage ? 'border-blue-400 bg-white shadow-inner' : 'border-gray-200 hover:border-blue-300 hover:bg-blue-50/30'}`}>
               
